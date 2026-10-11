@@ -1,0 +1,20 @@
+# Starter local infrastructure. Application services will be added as implementation proceeds.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: journeyhelp
+      POSTGRES_USER: journeyhelp
+      POSTGRES_PASSWORD: journeyhelp
+    ports:
+      - "5432:5432"
+    volumes:
+      - journeyhelp_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U journeyhelp -d journeyhelp"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  journeyhelp_pgdata:
