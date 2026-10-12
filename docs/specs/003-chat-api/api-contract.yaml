@@ -1,0 +1,36 @@
+openapi: 3.1.0
+info:
+  title: JourneyHelp API
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is running
+  /v1/chat:
+    post:
+      summary: Ask a product question
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [message]
+              properties:
+                project_id: {type: string}
+                session_id: {type: string}
+                message:
+                  type: object
+                  required: [content]
+                  properties:
+                    type: {type: string, enum: [text, transcript]}
+                    content: {type: string, minLength: 1, maxLength: 4000}
+                context: {type: object}
+                response_preferences: {type: object}
+      responses:
+        '200': {description: Answer and source references}
+        '422': {description: Invalid request}
+        '502': {description: Configured LLM provider failed}

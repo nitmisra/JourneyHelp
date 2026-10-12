@@ -1,0 +1,3 @@
+- [ ] Implement dashboard selection.
+- [ ] Propagate current item to widget context.
+- [ ] Verify selection and context update.

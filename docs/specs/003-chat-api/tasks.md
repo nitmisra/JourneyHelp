@@ -1,0 +1,3 @@
+- [ ] Define request and response schemas.
+- [ ] Implement health and chat endpoints.
+- [ ] Add contract tests.

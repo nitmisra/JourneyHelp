@@ -1,0 +1,3 @@
+- [ ] Define critical-topic matching.
+- [ ] Implement deterministic safety fallback.
+- [ ] Add safety tests.

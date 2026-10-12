@@ -1,0 +1,4 @@
+- [ ] Implement Web Component shell.
+- [ ] Build request from current context.
+- [ ] Render answers and sources safely.
+- [ ] Verify loading and error states.

@@ -1,0 +1,3 @@
+- [ ] Define knowledge record format.
+- [ ] Add illustrative sample entries.
+- [ ] Implement ranking and retrieval tests.

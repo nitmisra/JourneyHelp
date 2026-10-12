@@ -1,0 +1,3 @@
+- [ ] Implement provider adapter.
+- [ ] Add environment configuration and safe prompt.
+- [ ] Add mocked success/failure tests.
